@@ -13,6 +13,7 @@ namespace Bookstore.Controllers
     {
         BookContext db = new BookContext();
 
+
         public ActionResult Index()
         {
             IEnumerable<Book> books = db.Books;
