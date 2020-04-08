@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BookStore.Models.Book>
+﻿@model IEnumerable<Bookstore.Models.Book >
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -11,7 +11,7 @@
             <td><p>Цена</p></td>
             <td></td>
         </tr>
-        @foreach (var b in ViewBag.Books)
+        @foreach (var b in Model)
         {
             <tr>
                 <td><p>@b.Name</p></td>
@@ -25,10 +25,10 @@
 @section Footer {
     здесь секция footer
 }
-@helper BookList(IEnumerable<BookStore.Models.Book> books)
+@helper BookList(IEnumerable<Bookstore.Models.Book> books)
 {
     <ul>
-        @foreach (BookStore.Models.Book b in books)
+        @foreach (Bookstore.Models.Book b in books)
         {
             <li>@b.Name</li>
         }
